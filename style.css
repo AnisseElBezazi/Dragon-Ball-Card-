@@ -1,0 +1,231 @@
+@font-face{
+    font-family:"Saiyan-Sans";
+    src: url("font/Saiyan-Sans.ttf") format("truetype") 
+  }
+ body{
+background-image :url("image/backgr.png") ;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 100vh;
+}
+
+.haut{
+    display: flex;
+   justify-content: space-between;
+   
+}
+.barre{
+    display: flex;
+ gap: 10px;
+
+}
+
+h1{
+    font-size:60px;
+    color: chocolate;
+    font-family:"Saiyan-Sans";
+}
+h2{
+    font-size: 50px;
+    color: chocolate;
+    font-family:"Saiyan-Sans";
+}
+.compte{
+display: flex;
+gap: 20px;
+}
+
+.mid{
+    display: flex;
+    margin-top: 3%;
+}
+
+.menu{
+   display: flex; 
+   flex-direction: column;
+   margin-left: 1%;
+   transform: scale(0.60);
+}
+.slider{
+    position: relative;
+    width: 1150px;
+    height: 700px;
+    overflow: hidden;
+    margin: 20px auto;
+    transform: scale(0.80);
+}
+
+.cartes{
+    display: flex;
+}
+.carte{
+    min-width: 350px;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+.carte.active{
+    opacity: 1;
+}
+
+.arrow{
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.arrow.left{
+    left: 10px;
+    width: 30%;
+    height: 5%;
+}
+
+.arrow.right{
+    right: 10px;
+    width: 30%;
+    height: 5%;
+}
+.footer{
+    opacity: 0.7;
+   display: flex;
+}
+
+   @media screen and (max-width:900px){
+    .haut{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .barre{
+        gap: 5px;
+        transform: scale(0.8);
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .compte{
+margin-top: 0;
+    }
+    .slider{
+        position: relative;
+    width: 350px;
+    height: auto;
+    overflow: hidden;
+    margin: 10px auto;
+    }
+    .mid{
+        margin-top: 20%;
+    }
+   }
+   
+   @media screen and (min-width:1200px){
+.body{
+    height: auto;
+}
+    .haut{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .barre{
+        gap: 5px;
+        transform: scale(0.8);
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    .compte{
+margin-top: 0;
+    }
+    .slider{
+        position: relative;
+    width: 700px;
+    height: 700px;
+    overflow: hidden;
+    margin: 10px auto;
+    }
+    .menu{
+        transform: scale(0.8);
+    }
+
+   }
+
+   @media screen and (min-width:1500px){
+    .haut{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .barre{
+        gap: 5px;
+        transform: scale(0.8);
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    .compte{
+margin-top: 0;
+    }
+    .slider{
+        position: relative;
+    width: 1050px;
+    height: 700px;
+    overflow: hidden;
+    margin: 10px auto;
+    }
+    .menu{
+        transform: scale(0.9);
+    }
+   }
+
+   @media screen and (min-width:2000px){
+    .body{
+
+    }
+    .haut{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .barre{
+        gap: 5px;
+        transform: scale(0.8);
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    .compte{
+margin-top: 0;
+    }
+    .slider{
+        position: relative;
+    width: 1050px;
+    height: 700px;
+    overflow: hidden;
+    margin: 10px auto;
+    transform: scale(1.1);
+    }
+    .menu{
+        transform: scale(1);
+    }
+   }
+   
+   
+   
