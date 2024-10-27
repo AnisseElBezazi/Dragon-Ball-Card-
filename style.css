@@ -2,14 +2,85 @@
     font-family:"Saiyan-Sans";
     src: url("font/Saiyan-Sans.ttf") format("truetype") 
   }
- body{
+
+body{
 background-image :url("image/backgr.png") ;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 min-height: 100vh;
 }
-
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 40px;
+}
+.barre_niveau{
+    width: 100% ;
+    height: 5%;
+    background-color: rgb(164, 148, 98);
+   background-size: cover;
+    display: flex;
+    min-height: 40px;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+}
+   
+.catalogue{
+   margin-left: 20px auto;
+    width: 100% ;
+    height: 100%;
+   background-color: rgb(164, 148, 98);
+    background: cover;
+    background-position:center;
+}
+.catalogue img {
+    margin: 1%;
+    opacity: 1;
+}
+.footer {
+    margin-top: 10%;
+    background-color: chocolate;
+    bottom: 0;
+    margin-top: 10% auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-between  ;
+}
+.contenu_footer{
+    display: flex;
+    gap: 30px ;
+    
+}
+.catalogue img:hover{
+cursor: pointer;
+transform: scale(1.1);
+}
+.Insta:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.barre img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.menu img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.compte img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.X:hover{
+    cursor: pointer;
+transform: scale(1.1);
+}
 .haut{
     display: flex;
    justify-content: space-between;
@@ -35,7 +106,11 @@ h2{
 display: flex;
 gap: 20px;
 }
-
+p{
+    font-family:"Saiyan-Sans";
+    color: blue;
+    font-size: 40px;
+}
 .mid{
     display: flex;
     margin-top: 3%;
@@ -69,11 +144,15 @@ gap: 20px;
 .carte.active{
     opacity: 1;
 }
-
+.fin_slider{
+    opacity: 0.7;
+}
 .arrow{
     position: absolute;
+}
+.arrow:hover{
     cursor: pointer;
-    z-index: 3;
+    transform: scale(1.2);
 }
 
 .arrow.left{
@@ -87,12 +166,11 @@ gap: 20px;
     width: 30%;
     height: 5%;
 }
-.footer{
-    opacity: 0.7;
-   display: flex;
-}
 
-   @media screen and (max-width:900px){
+    
+
+
+   @media screen and (max-width:1045px){  /*Tablette *//*prends en charge tout se qui fait entre 685px et 1045*/
     .haut{
         flex-direction: row;
         justify-content: space-between;
@@ -114,19 +192,25 @@ margin-top: 0;
     .slider{
         position: relative;
     width: 350px;
-    height: auto;
+    height: 700px;
     overflow: hidden;
     margin: 10px auto;
     }
     .mid{
         margin-top: 20%;
     }
+    .catalogue img{
+        transform: scale(0.6);
+        margin: 0.5%;
+        }
+    .catalogue img:hover{
+            cursor: pointer;
+            transform: scale(0.8);
+    }
+    
    }
    
-   @media screen and (min-width:1200px){
-.body{
-    height: auto;
-}
+   @media screen and (min-width:1045px){ /*petit pc*/
     .haut{
         flex-direction: row;
         justify-content: space-between;
@@ -156,10 +240,10 @@ margin-top: 0;
     .menu{
         transform: scale(0.8);
     }
-
+    
    }
 
-   @media screen and (min-width:1500px){
+   @media screen and (min-width:1300px){ /*FHD*/
     .haut{
         flex-direction: row;
         justify-content: space-between;
@@ -167,7 +251,7 @@ margin-top: 0;
     }
     .barre{
         gap: 5px;
-        transform: scale(0.8);
+        transform: scale(1);
     }
 
     h1 {
@@ -191,8 +275,9 @@ margin-top: 0;
     }
    }
 
-   @media screen and (min-width:2000px){
+   @media screen and (min-width:2000px){/*QHD*/
     .body{
+        background-size: cover;
 
     }
     .haut{
@@ -202,7 +287,7 @@ margin-top: 0;
     }
     .barre{
         gap: 5px;
-        transform: scale(0.8);
+        transform: scale(1);
     }
 
     h1 {
@@ -225,7 +310,11 @@ margin-top: 0;
     .menu{
         transform: scale(1);
     }
+    
    }
    
    
-   
+   /*Le site est adapter de 690 pixel de largeur jusqu'a la résolution QHD*/
+    /*Le slider affiche un nombre de carte allant de 1 a 3 selon la resolution de l'appareille*/
+   /*Plus bas qu'une resolution de 690 pixel de largeur je rencontre un probleme avec la commande overflow hidden cachant le slider*/
+   /*Signé Anisse :-) */
